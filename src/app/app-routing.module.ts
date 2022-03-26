@@ -16,6 +16,22 @@ const routes: Routes = [
         path: 'supervisor',
         loadChildren: () => import('./supervisor/supervisor.module').then(m => m.SupervisorModule)
       },
+      {
+        path: 'space',
+        loadChildren: () => import('./space/space.module').then(m => m.SpaceModule)
+      },
+      {
+        path: 'sensor',
+        loadChildren: () => import('./sensor/sensor.module').then(m => m.SensorModule)
+      },
+      {
+        path: 'air',
+        loadChildren: () => import('./air/air.module').then(m => m.AirModule)
+      },
+      {
+        path: 'panel',
+        loadChildren: () => import('./panel/panel.module').then(m => m.PanelModule)
+      },
     ]
   },
   {
@@ -25,22 +41,6 @@ const routes: Routes = [
   {
     path: 'home',
     loadChildren: () => import('./home/home.module').then(m => m.HomeModule)
-  },
-  {
-    path: 'space',
-    loadChildren: () => import('./space/space.module').then(m => m.SpaceModule)
-  },
-  {
-    path: 'sensor ',
-    loadChildren: () => import('./sensor/sensor.module').then(m => m.SensorModule)
-  },
-  {
-    path: 'air',
-    loadChildren: () => import('./air/air.module').then(m => m.AirModule)
-  },
-  {
-    path: 'panel',
-    loadChildren: () => import('./panel/panel.module').then(m => m.PanelModule)
   },
 ];
 
